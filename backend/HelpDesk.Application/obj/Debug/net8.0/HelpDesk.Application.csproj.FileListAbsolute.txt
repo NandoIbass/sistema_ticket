@@ -1,0 +1,15 @@
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\bin\Debug\net8.0\HelpDesk.Application.deps.json
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\bin\Debug\net8.0\HelpDesk.Application.dll
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\bin\Debug\net8.0\HelpDesk.Application.pdb
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\bin\Debug\net8.0\HelpDesk.Domain.dll
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\bin\Debug\net8.0\HelpDesk.Domain.pdb
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.csproj.AssemblyReference.cache
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.AssemblyInfoInputs.cache
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.AssemblyInfo.cs
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.csproj.CoreCompileInputs.cache
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.026280F4.Up2Date
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.dll
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\refint\HelpDesk.Application.dll
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\HelpDesk.Application.pdb
+C:\Users\fer_n\Desktop\PRUEBA TECNICA\sistema_ticket\backend\HelpDesk.Application\obj\Debug\net8.0\ref\HelpDesk.Application.dll

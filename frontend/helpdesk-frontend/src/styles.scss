@@ -1,0 +1,118 @@
+@use '@angular/material' as mat;
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.table-shadow {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+
+$my-primary: (
+  0: #ffffff,
+  10: #e0f2fe,
+  20: #bae6fd,
+  30: #7dd3fc,
+  40: #38bdf8,
+  50: #0ea5e9,
+  60: #0284c7,
+  70: #0369a1,
+  80: #075985,
+  90: #0c4a6e,
+  100: #082f49,
+);
+
+$my-tertiary: (
+  40: #818cf8,
+  50: #6366f1,
+  60: #4f46e5,
+  70: #4338ca,
+  80: #3730a3,
+  90: #312e81,
+);
+
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: $my-primary,
+      tertiary: $my-tertiary,
+    ),
+    typography: (
+      brand-family: 'Roboto, "Helvetica Neue", sans-serif',
+      plain-family: 'Roboto, "Helvetica Neue", sans-serif',
+    ),
+    density: 0
+  ));
+}
+
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
+}
+mat-form-field {
+  width: 100%;
+  background-color: #f9fafb; /* gris muy claro */
+  border-radius: 0.5rem;
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 0.5rem;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+}
+
+/* 🔧 Ajustes de integración Tailwind + Material */
+// mat-form-field {
+//   width: 100%;
+
+//   .mat-mdc-text-field-wrapper {
+//     border-radius: 8px;
+//   }
+
+//   .mdc-text-field--outlined {
+//     background-color: #f9fafb;
+//   }
+// }
+
+button[mat-raised-button] {
+  text-transform: none;
+  background-color: #93c5fd !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #60a5fa !important;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-outline-color: #cbd5e1;
+  --mdc-outlined-text-field-focus-outline-color: #3b82f6;
+}
+
+.mat-mdc-text-field-wrapper {
+  border-radius: 0.5rem !important;
+}
+
+button[mat-raised-button] {
+  text-transform: none;
+}

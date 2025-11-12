@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDesk.Domain", "HelpDesk.Domain\HelpDesk.Domain.csproj", "{03EF29DE-838D-4077-8752-C72CD7D9BFE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDesk.Application", "HelpDesk.Application\HelpDesk.Application.csproj", "{33D260AC-4535-4F59-9DA7-0863D445C6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDesk.Infrastructure", "HelpDesk.Infrastructure\HelpDesk.Infrastructure.csproj", "{82A36290-3473-4879-810E-5E5562580E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDesk.Api", "HelpDesk.Api\HelpDesk.Api.csproj", "{334E3C7F-40BB-4295-A091-62D169DC0D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDesk.Tests", "HelpDesk.Tests\HelpDesk.Tests.csproj", "{D12D0ACD-0843-4E09-860A-8EB7D62D6E39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03EF29DE-838D-4077-8752-C72CD7D9BFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EF29DE-838D-4077-8752-C72CD7D9BFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EF29DE-838D-4077-8752-C72CD7D9BFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EF29DE-838D-4077-8752-C72CD7D9BFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D260AC-4535-4F59-9DA7-0863D445C6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D260AC-4535-4F59-9DA7-0863D445C6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D260AC-4535-4F59-9DA7-0863D445C6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D260AC-4535-4F59-9DA7-0863D445C6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A36290-3473-4879-810E-5E5562580E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A36290-3473-4879-810E-5E5562580E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A36290-3473-4879-810E-5E5562580E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A36290-3473-4879-810E-5E5562580E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334E3C7F-40BB-4295-A091-62D169DC0D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334E3C7F-40BB-4295-A091-62D169DC0D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334E3C7F-40BB-4295-A091-62D169DC0D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334E3C7F-40BB-4295-A091-62D169DC0D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12D0ACD-0843-4E09-860A-8EB7D62D6E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12D0ACD-0843-4E09-860A-8EB7D62D6E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12D0ACD-0843-4E09-860A-8EB7D62D6E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12D0ACD-0843-4E09-860A-8EB7D62D6E39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

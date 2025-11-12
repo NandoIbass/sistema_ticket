@@ -1,0 +1,142 @@
+<div class="p-8">
+  <h1 class="text-3xl font-bold mb-6">Gestión de Tickets</h1>
+
+
+  <div class="flex flex-wrap gap-3 mb-4 items-center">
+     <button
+      routerLink="/tickets/new"
+      class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 shadow"
+    >
+      Crear Ticket
+    </button>
+  </div>
+
+  <div class="flex flex-wrap gap-3 mb-6 items-center bg-white p-4 rounded shadow">
+  <div>
+    <label class="block text-sm text-gray-600 mb-1">Estado</label>
+    <select [(ngModel)]="filterStatus" class="border rounded px-3 py-2">
+      <option value="">Todos</option>
+      <option value="Abierto">Abierto</option>
+      <option value="En progreso">En progreso</option>
+      <option value="Resuelto">Resuelto</option>
+      <option value="Cerrado">Cerrado</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-sm text-gray-600 mb-1">Prioridad</label>
+    <select [(ngModel)]="filterPriority" class="border rounded px-3 py-2">
+      <option value="">Todas</option>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select>
+  </div>
+
+  <button
+    (click)="applyFilters()"
+    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+  >
+    Aplicar
+  </button>
+
+  <button
+    (click)="clearFilters()"
+    class="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
+  >
+    Limpiar
+  </button>
+</div>
+
+
+
+  <div class="bg-white rounded-lg shadow overflow-hidden">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ID</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Título</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Descripción</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Prioridad</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Estado</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Creado</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Asignado a</th>
+          <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-200 bg-white">
+        <tr *ngFor="let t of tickets" class="hover:bg-gray-50 transition">
+          <td class="px-6 py-4">{{ t.id }}</td>
+          <td class="px-6 py-4 font-medium text-gray-800">{{ t.title }}</td>
+          <td class="px-6 py-4 text-gray-600">{{ t.description }}</td>
+          <td class="px-6 py-4">
+            <span
+              class="px-2 py-1 text-xs rounded font-semibold"
+              [ngClass]="{
+                'bg-red-100 text-red-700': t.priority === 'Alta',
+                'bg-yellow-100 text-yellow-700': t.priority === 'Media',
+                'bg-green-100 text-green-700': t.priority === 'Baja'
+              }"
+            >
+              {{ t.priority }}
+            </span>
+          </td>
+          <td class="px-6 py-4">{{ t.status }}</td>
+          <td class="px-6 py-4 text-sm text-gray-500">{{ t.createdAt | date:'short' }}</td>
+          <td class="px-6 py-4">{{ t.assignedUser || 'Sin asignar' }}</td>
+          <td class="px-6 py-4">
+            <button
+              [routerLink]="['/tickets/edit', t.id]"
+              class="px-3 py-1 bg-yellow-400 text-black rounded shadow mr-2 hover:bg-yellow-500"
+            >
+              Editar
+            </button>
+            <button
+              (click)="deleteTicket(t.id)"
+              class="px-3 py-1 bg-red-500 text-white rounded shadow hover:bg-red-600"
+            >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flex justify-between items-center mt-6" *ngIf="total > pageSize">
+    <button
+      (click)="prevPage()"
+      [disabled]="page === 1"
+      class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+    >
+      ⬅️ Anterior
+    </button>
+
+    <div class="flex gap-2">
+      <button
+        *ngFor="let p of [].constructor(Math.ceil(total / pageSize)); let i = index"
+        (click)="goToPage(i + 1)"
+        [ngClass]="{
+          'bg-blue-600 text-white': page === i + 1,
+          'bg-gray-100': page !== i + 1
+        }"
+        class="px-3 py-1 rounded border hover:bg-blue-100"
+      >
+        {{ i + 1 }}
+      </button>
+    </div>
+
+    <button
+      (click)="nextPage()"
+      [disabled]="page * pageSize >= total"
+      class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+    >
+      Siguiente ➡️
+    </button>
+  </div>
+
+
+
+
+ 

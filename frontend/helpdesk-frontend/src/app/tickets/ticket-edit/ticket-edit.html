@@ -1,0 +1,61 @@
+<div class="p-6 max-w-xl mx-auto bg-white rounded-lg shadow">
+  <h2 class="text-2xl font-semibold mb-4">Editar Ticket</h2>
+
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()" class="space-y-3">
+    <input
+      formControlName="title"
+      type="text"
+      placeholder="Título"
+      class="w-full border rounded px-3 py-2 focus:outline-none focus:ring"
+    />
+
+    <textarea
+      formControlName="description"
+      rows="3"
+      placeholder="Descripción"
+      class="w-full border rounded px-3 py-2 focus:outline-none focus:ring"
+    ></textarea>
+
+    <select
+      formControlName="priority"
+      class="w-full border rounded px-3 py-2 focus:outline-none focus:ring"
+    >
+      <option *ngFor="let p of priorities" [value]="p">{{ p }}</option>
+    </select>
+
+    <select
+      formControlName="status"
+      class="w-full border rounded px-3 py-2 focus:outline-none focus:ring"
+    >
+      <option *ngFor="let s of statuses" [value]="s">{{ s }}</option>
+    </select>
+
+    <input
+      formControlName="assignedUser"
+      type="text"
+      placeholder="Usuario asignado"
+      class="w-full border rounded px-3 py-2 focus:outline-none focus:ring"
+    />
+
+    <div class="flex justify-end gap-3 pt-3">
+      <button
+        type="button"
+        (click)="goBack()"
+        class="px-4 py-2 rounded border border-gray-400 hover:bg-gray-100"
+      >
+        Cancelar
+      </button>
+
+      <button
+        type="submit"
+        [disabled]="loading"
+        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+      >
+        {{ loading ? 'Guardando...' : 'Guardar Cambios' }}
+      </button>
+    </div>
+
+    <p *ngIf="successMsg" class="text-green-600">{{ successMsg }}</p>
+    <p *ngIf="errorMsg" class="text-red-600">{{ errorMsg }}</p>
+  </form>
+</div>
