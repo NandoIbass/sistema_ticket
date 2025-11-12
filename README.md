@@ -58,6 +58,7 @@ git clone https://github.com/NandoIbass/sistema_ticket.git
 
 
 💡 Si tienes problemas con este comando, asegúrate de que Git esté configurado correctamente en tus variables de entorno.
+
 🧩 2️⃣ Configurar y ejecutar el Backend (.NET API)
 
 2.1Abre el proyecto clonado en Visual Studio codeo 
